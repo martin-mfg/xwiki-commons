@@ -24,7 +24,7 @@
   <artifactId>xwiki-commons</artifactId>
   <name>XWiki Commons - Parent POM</name>
   <packaging>pom</packaging>
-  <version>13.4-SNAPSHOT</version>
+  <version>13.8-SNAPSHOT</version>
   <description>A collaborative development platform runtime based on the wiki paradigm</description>
   <!-- This special URL automatically finds the correct documentation page or javadoc for the module based on the
        passed maven coordinates (groupid:artifactid:version). Starting with 6.2-milestone-1, the version has been
@@ -46,11 +46,11 @@
   <properties>
     <!-- Define it here because we can't use ${project.version} for plugins and it's useful for
          commons children anyway -->
-    <commons.version>13.4-SNAPSHOT</commons.version>
+    <commons.version>13.8-SNAPSHOT</commons.version>
 
     <!-- The previous stable version of this project to check against for finding backward incompatibility
          (binary and source). -->
-    <xwiki.compatibility.previous.version>13.2</xwiki.compatibility.previous.version>
+    <xwiki.compatibility.previous.version>13.7</xwiki.compatibility.previous.version>
 
     <!-- Java -->
     <java.version>1.8</java.version>
@@ -61,24 +61,24 @@
     <jakarta.transaction.version>1.3.3</jakarta.transaction.version>
 
     <!-- Jackson -->
-    <jackson.version>2.12.3</jackson.version>
+    <jackson.version>2.12.5</jackson.version>
 
     <!-- ASM -->
-    <asm.version>9.1</asm.version>
+    <asm.version>9.2</asm.version>
 
     <!-- Guava -->
     <guava.version>30.1.1-jre</guava.version>
 
     <!-- SLF4J -->
-    <slf4j.version>1.7.30</slf4j.version>
+    <slf4j.version>1.7.32</slf4j.version>
 
     <!-- Hamcrest -->
     <hamcrest.version>2.2</hamcrest.version>
 
     <!-- JUnit -->
     <junit.version>4.13.2</junit.version>
-    <junit5.version>5.7.1</junit5.version>
-    <junit.platform.version>1.7.1</junit.platform.version>
+    <junit5.version>5.7.2</junit5.version>
+    <junit.platform.version>1.7.2</junit.platform.version>
     <junit.vintage.version>${junit5.version}</junit.vintage.version>
 
     <!-- Used to keep the surefire and failsafe plugins in sync (to avoid having different behaviors when tests
@@ -87,20 +87,20 @@
 
     <!-- Mock libraries -->
     <jmock.version>2.12.0</jmock.version>
-    <mockito.version>3.9.0</mockito.version>
+    <mockito.version>3.12.4</mockito.version>
 
     <!-- Byte Buddy -->
-    <bytebuddy.version>1.11.0</bytebuddy.version>
+    <bytebuddy.version>1.11.13</bytebuddy.version>
 
     <!-- AspectJ -->
-    <aspectj.version>1.9.6</aspectj.version>
+    <aspectj.version>1.9.7</aspectj.version>
 
     <!-- Clover & Jacoco -->
     <clover.version>4.4.1</clover.version>
-    <jacoco.version>0.8.6</jacoco.version>
+    <jacoco.version>0.8.7</jacoco.version>
 
     <!-- Checkstyle -->
-    <checkstyle.version>8.41.1</checkstyle.version>
+    <checkstyle.version>8.45.1</checkstyle.version>
 
     <!-- Spoon -->
     <spoon.version>7.5.0</spoon.version>
@@ -123,8 +123,7 @@
     <xwiki.enforcer.enforce-jcl-log4j-isolation.skip>${xwiki.enforcer.skip}
     </xwiki.enforcer.enforce-jcl-log4j-isolation.skip>
     <xwiki.enforcer.enforce-glasshfish-jaxb.skip>${xwiki.enforcer.skip}</xwiki.enforcer.enforce-glasshfish-jaxb.skip>
-    <xwiki.enforcer.enforce-jakarta.xml.bind-api.skip>${xwiki.enforcer.skip}
-    </xwiki.enforcer.enforce-jakarta.xml.bind-api.skip>
+    <xwiki.enforcer.enforce-jaxrs1.skip>${xwiki.enforcer.skip}</xwiki.enforcer.enforce-jaxrs1.skip>
     <xwiki.enforcer.enforce-open-json.skip>${xwiki.enforcer.skip}</xwiki.enforcer.enforce-open-json.skip>
     <xwiki.enforcer.enforce-glassfish-el.skip>${xwiki.enforcer.skip}</xwiki.enforcer.enforce-glassfish-el.skip>
     <xwiki.enforcer.enforce-commons-lang3.skip>${xwiki.enforcer.skip}</xwiki.enforcer.enforce-commons-lang3.skip>
@@ -138,8 +137,6 @@
     <xwiki.enforcer.enforce-bouncycastle-ids.skip>${xwiki.enforcer.skip}</xwiki.enforcer.enforce-bouncycastle-ids.skip>
     <xwiki.enforcer.enforce-jsr305.skip>${xwiki.enforcer.skip}</xwiki.enforcer.enforce-jsr305.skip>
     <xwiki.enforcer.enforce-jta.skip>${xwiki.enforcer.skip}</xwiki.enforcer.enforce-jta.skip>
-    <xwiki.enforcer.enforce-jboss-marshalling-osgi.skip>${xwiki.enforcer.skip}
-    </xwiki.enforcer.enforce-jboss-marshalling-osgi.skip>
     <xwiki.enforcer.enforce-jakarta.validation-api.skip>${xwiki.enforcer.skip}</xwiki.enforcer.enforce-jakarta.validation-api.skip>
     <xwiki.enforcer.enforce-hibernate-validator.skip>${xwiki.enforcer.skip}</xwiki.enforcer.enforce-hibernate-validator.skip>
     <xwiki.enforcer.enforce-javase-dependencies.skip>${xwiki.enforcer.skip}
@@ -194,13 +191,13 @@
 
     <!-- Version of Maven used during the build (the one used as dependency when building and during Maven plugins
          executions)  -->
-    <maven.build.version>3.5.4</maven.build.version>
+    <maven.build.version>3.6.0</maven.build.version>
     <!-- Minimum version of the actual Maven binary required to build -->
-    <maven.minimum.version>3.5.0</maven.minimum.version>
+    <maven.minimum.version>3.6.0</maven.minimum.version>
     <!-- The current Maven version declared in the dependency management (so that it can be change for the distribution
          for example) -->
     <maven.version>${maven.build.version}</maven.version>
-    <maven.resolver.build.version>1.1.1</maven.resolver.build.version>
+    <maven.resolver.build.version>1.3.1</maven.resolver.build.version>
     <maven.resolver.version>${maven.resolver.build.version}</maven.resolver.version>
 
     <!-- Plexus -->
@@ -212,7 +209,7 @@
     <maven.maven-enforcer.version>2.2.1</maven.maven-enforcer.version>
 
     <!-- The version of the Maven Plugin Tools -->
-    <maven.plugin.tools.version>3.6.0</maven.plugin.tools.version>
+    <maven.plugin.tools.version>3.6.1</maven.plugin.tools.version>
 
     <!-- The version of the Maven Remote Resource plugin -->
     <maven-remote-resources-plugin.version>1.7.0</maven-remote-resources-plugin.version>
@@ -342,7 +339,7 @@
       <dependency>
         <groupId>commons-io</groupId>
         <artifactId>commons-io</artifactId>
-        <version>2.8.0</version>
+        <version>2.11.0</version>
       </dependency>
       <dependency>
         <groupId>org.apache.commons</groupId>
@@ -364,7 +361,18 @@
         <artifactId>commons-text</artifactId>
         <version>1.9</version>
       </dependency>
-      <!-- Apache HttpComponents -->
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-csv</artifactId>
+        <version>1.9.0</version>
+      </dependency>
+      <!-- Apache HttpComponents 5 -->
+      <dependency>
+        <groupId>org.apache.httpcomponents.client5</groupId>
+        <artifactId>httpclient5</artifactId>
+        <version>5.1</version>
+      </dependency>
+      <!-- Apache HttpComponents 4 -->
       <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
@@ -413,7 +421,7 @@
       <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-dbcp2</artifactId>
-        <version>2.8.0</version>
+        <version>2.9.0</version>
         <!-- We want to choose the SLF4J binding only when XWiki is packaged. -->
         <exclusions>
           <exclusion>
@@ -425,7 +433,7 @@
       <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-pool2</artifactId>
-        <version>2.9.0</version>
+        <version>2.11.1</version>
       </dependency>
       <dependency>
         <groupId>commons-fileupload</groupId>
@@ -477,7 +485,7 @@
       <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-compress</artifactId>
-        <version>1.20</version>
+        <version>1.21</version>
       </dependency>
       <dependency>
         <groupId>commons-validator</groupId>
@@ -521,7 +529,7 @@
       <dependency>
         <groupId>com.thoughtworks.xstream</groupId>
         <artifactId>xstream</artifactId>
-        <version>1.4.16</version>
+        <version>1.4.17</version>
       </dependency>
       <!-- Note: The DOM4J project has been dead for several years and we've decided to not use it in any new code and
            over time to refactor existing code to use JDOM or other XML techniques (such as STaX). When all code has
@@ -584,7 +592,7 @@
       <dependency>
         <groupId>com.fasterxml.woodstox</groupId>
         <artifactId>woodstox-core</artifactId>
-        <version>6.2.5</version>
+        <version>6.2.6</version>
       </dependency>
       <dependency>
         <groupId>jaxen</groupId>
@@ -617,7 +625,7 @@
       <dependency>
         <groupId>org.glassfish.jaxb</groupId>
         <artifactId>jaxb-runtime</artifactId>
-        <version>2.3.4</version>
+        <version>2.3.5</version>
       </dependency>
       <!-- ICU -->
       <dependency>
@@ -649,7 +657,7 @@
       <dependency>
         <groupId>com.google.code.gson</groupId>
         <artifactId>gson</artifactId>
-        <version>2.8.6</version>
+        <version>2.8.8</version>
       </dependency>
 
       <!-- Jackson -->
@@ -743,7 +751,7 @@
       <dependency>
         <groupId>org.yaml</groupId>
         <artifactId>snakeyaml</artifactId>
-        <version>1.28</version>
+        <version>1.29</version>
       </dependency>
 
       <!-- JAX-RS -->
@@ -764,17 +772,17 @@
       <dependency>
         <groupId>org.bouncycastle</groupId>
         <artifactId>bcprov-jdk15on</artifactId>
-        <version>1.68</version>
+        <version>1.69</version>
       </dependency>
       <dependency>
         <groupId>org.bouncycastle</groupId>
         <artifactId>bcpkix-jdk15on</artifactId>
-        <version>1.68</version>
+        <version>1.69</version>
       </dependency>
       <dependency>
         <groupId>org.bouncycastle</groupId>
         <artifactId>bcmail-jdk15on</artifactId>
-        <version>1.68</version>
+        <version>1.69</version>
       </dependency>
 
       <!-- Various project are using it to scan the classpath -->
@@ -868,7 +876,7 @@
       <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
-        <version>1.2.3</version>
+        <version>1.2.5</version>
       </dependency>
       <!-- External libraries using Commons Logging will delegate to SLF4J -->
       <dependency>
@@ -898,20 +906,14 @@
       <dependency>
         <groupId>org.jboss.logging</groupId>
         <artifactId>jboss-logging</artifactId>
-        <version>3.4.1.Final</version>
-      </dependency>
-      <!-- Make sure everyone use the same version of JBoss Marshalling -->
-      <dependency>
-        <groupId>org.jboss.marshalling</groupId>
-        <artifactId>jboss-marshalling-osgi</artifactId>
-        <version>2.0.11.Final</version>
+        <version>3.4.2.Final</version>
       </dependency>
 
       <!-- Javassist -->
       <dependency>
         <groupId>org.javassist</groupId>
         <artifactId>javassist</artifactId>
-        <version>3.27.0-GA</version>
+        <version>3.28.0-GA</version>
       </dependency>
 
       <!-- Triggered by several Maven related projects (Doxia, Maven, Aether) as transitive dependency. We need
@@ -919,7 +921,7 @@
       <dependency>
         <groupId>org.codehaus.plexus</groupId>
         <artifactId>plexus-utils</artifactId>
-        <version>3.3.0</version>
+        <version>3.4.1</version>
       </dependency>
       <dependency>
         <groupId>org.codehaus.plexus</groupId>
@@ -1046,7 +1048,7 @@
       <dependency>
         <groupId>org.apache.maven.shared</groupId>
         <artifactId>maven-shared-utils</artifactId>
-        <version>3.3.3</version>
+        <version>3.3.4</version>
       </dependency>
       <!-- Maven Resolver -->
       <dependency>
@@ -1190,6 +1192,11 @@
         <artifactId>byte-buddy</artifactId>
         <version>${bytebuddy.version}</version>
       </dependency>
+      <dependency>
+        <groupId>net.bytebuddy</groupId>
+        <artifactId>byte-buddy-agent</artifactId>
+        <version>${bytebuddy.version}</version>
+      </dependency>
 
       <!-- Several modules depend on the servlet API -->
       <dependency>
@@ -1198,6 +1205,13 @@
         <version>3.1.0</version>
         <!-- It should always be provided as the API jar is provided by the Servlet Container in which XWiki is
              deployed -->
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>javax.websocket</groupId>
+        <artifactId>javax.websocket-api</artifactId>
+        <!-- We can't use v1.1 yet because the version of Jetty we currently use doesn't support it. -->
+        <version>1.0</version>
         <scope>provided</scope>
       </dependency>
       <!-- Needed for Legacy modules. The version needs to be in sync with the one used by the AspectJ plugin -->
@@ -1351,17 +1365,17 @@
       <dependency>
         <groupId>com.github.ben-manes.caffeine</groupId>
         <artifactId>caffeine</artifactId>
-        <version>2.9.0</version>
+        <version>2.9.2</version>
       </dependency>
       <dependency>
         <groupId>org.checkerframework</groupId>
         <artifactId>checker-qual</artifactId>
-        <version>3.12.0</version>
+        <version>3.17.0</version>
       </dependency>
       <dependency>
         <groupId>com.google.errorprone</groupId>
         <artifactId>error_prone_annotations</artifactId>
-        <version>2.6.0</version>
+        <version>2.9.0</version>
       </dependency>
       <!-- The maven remote resource plugin is also used as dependency -->
       <dependency>
@@ -1374,17 +1388,17 @@
       <dependency>
         <groupId>com.google.protobuf</groupId>
         <artifactId>protobuf-java</artifactId>
-        <version>3.15.8</version>
+        <version>3.17.3</version>
       </dependency>
       <dependency>
         <groupId>org.infinispan.protostream</groupId>
         <artifactId>protostream</artifactId>
-        <version>4.3.5.Final</version>
+        <version>4.4.1.Final</version>
       </dependency>
       <dependency>
         <groupId>org.infinispan</groupId>
         <artifactId>infinispan-core</artifactId>
-        <version>11.0.10.Final</version>
+        <version>12.1.7.Final</version>
         <exclusions>
           <!-- We use jakarta.transaction:jakarta.transaction-api (the reference API id) instead in XWiki -->
           <exclusion>
@@ -1500,6 +1514,25 @@
                     <exclude>com.sun.xml.bind:jaxb-impl</exclude>
                     <exclude>com.sun.xml.bind:jaxb-core</exclude>
                     <exclude>org.glassfish.jaxb:jaxb-core</exclude>
+                  </excludes>
+                </bannedDependencies>
+              </rules>
+            </configuration>
+          </execution>
+          <!-- TODO: invert when https://jira.xwiki.org/browse/XWIKI-12955 is fixed -->
+          <execution>
+            <id>enforce-jaxrs1</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <skip>${xwiki.enforcer.enforce-jaxrs1.skip}</skip>
+              <rules>
+                <bannedDependencies>
+                  <searchTransitive>true</searchTransitive>
+                  <message>XWiki only support JAX-RS 1 (javax.ws.rs:jsr311-api) for now</message>
+                  <excludes>
+                    <exclude>javax.ws.rs:javax.ws.rs-api</exclude>
                   </excludes>
                 </bannedDependencies>
               </rules>
@@ -1878,25 +1911,6 @@
               </rules>
             </configuration>
           </execution>
-          <!-- Check that we use the right version of the JBoss Marshalling -->
-          <execution>
-            <id>enforce-jboss-marshalling-osgi</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <skip>${xwiki.enforcer.enforce-jboss-marshalling-osgi.skip}</skip>
-              <rules>
-                <bannedDependencies>
-                  <searchTransitive>true</searchTransitive>
-                  <message>Use org.jboss.marshalling:jboss-marshalling-osgi instead</message>
-                  <excludes>
-                    <exclude>org.jboss.marshalling:jboss-marshalling</exclude>
-                  </excludes>
-                </bannedDependencies>
-              </rules>
-            </configuration>
-          </execution>
           <!-- Check that we use the right version of the Validation API -->
           <execution>
             <id>enforce-jakarta.validation-api</id>
@@ -1994,7 +2008,7 @@
           <groupId>com.mycila</groupId>
           <artifactId>license-maven-plugin</artifactId>
           <!-- Lock down plugin version for build reproducibility -->
-          <version>4.0</version>
+          <version>4.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -2092,10 +2106,13 @@
                 <value>${xwiki.test.verifyRunningXWikiAtStart}</value>
               </property>
             </systemProperties>
-            <!-- Explicitly define how much memory to give to the forked JVM process for the tests, as otherwise
-                 Java will give about 1/4th of the physical memory which can be not enough or too much (e.g. on a CI
-                 agent too much means we cannot run as many jobs in parallel as we could). -->
-            <argLine>@{argLine} -Xmx1024m</argLine>
+            <!--
+                 - Explicitly define how much memory to give to the forked JVM process for the tests, as otherwise
+                   Java will give about 1/4th of the physical memory which can be not enough or too much (e.g. on a CI
+                   agent too much means we cannot run as many jobs in parallel as we could).
+                 - Take a heap dump on low memory to diagnose issues
+            -->
+            <argLine>@{argLine} -Xmx1024m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${project.build.directory}</argLine>
           </configuration>
         </plugin>
         <plugin>
@@ -2127,10 +2144,15 @@
                 <value>true</value>
               </property>
             </systemProperties>
-            <!-- Explicitly define how much memory to give to the forked JVM process for the tests, as otherwise
-                 Java will give about 1/4th of the physical memory which can be not enough or too much (e.g. on a CI
-                 agent too much means we cannot run as many jobs in parallel as we could). -->
-            <argLine>@{argLine} -Xmx1024m</argLine>
+            <!--
+                 - Explicitly define how much memory to give to the forked JVM process for the tests, as otherwise
+                   Java will give about 1/4th of the physical memory which can be not enough or too much (e.g. on a CI
+                   agent too much means we cannot run as many jobs in parallel as we could).
+                 - TODO: Put back -Xmx1024m once https://github.com/testcontainers/testcontainers-java/issues/4203 is
+                   fixed as we should use the lowest possible value to use less memory.
+                 - Take a heap dump on low memory to diagnose issues
+            -->
+            <argLine>@{argLine} -Xmx1536m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${project.build.directory}</argLine>
           </configuration>
           <executions>
             <execution>
@@ -2177,7 +2199,7 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
           <!-- Lock down plugin version for build reproducibility -->
-          <version>3.1.2</version>
+          <version>3.2.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -2200,10 +2222,10 @@
           <version>2.8.2</version>
         </plugin>
         <plugin>
-          <groupId>com.nickwongdev</groupId>
+          <groupId>org.codehaus.mojo</groupId>
           <artifactId>aspectj-maven-plugin</artifactId>
           <!-- Lock down plugin version for build reproducibility -->
-          <version>1.12.6</version>
+          <version>1.14.0</version>
           <configuration>
             <complianceLevel>${java.version}</complianceLevel>
             <source>${java.version}</source>
@@ -2276,19 +2298,19 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <!-- Lock down plugin version for build reproducibility -->
-          <version>3.1.1</version>
+          <version>3.1.2</version>
         </plugin>
         <!-- Used for checking backward compatibility (binary and source) -->
         <plugin>
           <groupId>org.revapi</groupId>
           <artifactId>revapi-maven-plugin</artifactId>
           <!-- Lock down plugin version for build reproducibility -->
-          <version>0.11.5</version>
+          <version>0.14.3</version>
           <dependencies>
             <dependency>
               <groupId>org.revapi</groupId>
               <artifactId>revapi-java</artifactId>
-              <version>0.21.2</version>
+              <version>0.24.4</version>
             </dependency>
           </dependencies>
           <executions>
@@ -2348,19 +2370,19 @@
           <groupId>org.sonarsource.scanner.maven</groupId>
           <artifactId>sonar-maven-plugin</artifactId>
           <!-- Lock down plugin version for build reproducibility -->
-          <version>3.7.0.1746</version>
+          <version>3.9.0.2155</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
           <!-- Lock down plugin version for build reproducibility -->
-          <version>1.6</version>
+          <version>3.0.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
           <!-- Lock down plugin version for build reproducibility -->
-          <version>3.2.0</version>
+          <version>3.3.0</version>
           <configuration>
             <!-- Always exclude the internal package since it's not user-public -->
             <excludePackageNames>*.internal, *.internal.*</excludePackageNames>
@@ -2413,7 +2435,7 @@
           <groupId>com.github.searls</groupId>
           <artifactId>jasmine-maven-plugin</artifactId>
           <!-- Lock down plugin version for build reproducibility -->
-          <version>2.1</version>
+          <version>2.2</version>
           <configuration>
             <phantomjs>
               <version>2.1.1</version>
