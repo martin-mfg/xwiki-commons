@@ -2435,7 +2435,7 @@
           <groupId>com.github.searls</groupId>
           <artifactId>jasmine-maven-plugin</artifactId>
           <!-- Lock down plugin version for build reproducibility -->
-          <version>2.1</version>
+          <version>2.2</version>
           <configuration>
             <phantomjs>
               <version>2.1.1</version>
